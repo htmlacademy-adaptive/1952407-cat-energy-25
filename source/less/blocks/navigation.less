@@ -1,0 +1,32 @@
+.navigation {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  width: 100%;
+  background-color: @color-main;
+}
+
+.navigation--hidden {
+  // display: none;
+}
+
+.navigation__list {
+  .reset-list();
+}
+
+.navigation__item {
+  border-top: 1px solid #e6e6e6;
+  text-align: center;
+}
+
+.navigation__link {
+  color: @color-main-text;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 22px 0 24px 0;
+}
+
+.navigation__link--curent {
+  cursor: pointer;
+}
