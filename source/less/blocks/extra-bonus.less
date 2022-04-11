@@ -1,0 +1,33 @@
+.extra-bonus {
+  background: linear-gradient(fade(@color-brand, 85%), fade(@color-brand, 85%)),
+    url("../../img/extra-bonus-background-cat-mobile.jpg") center/cover no-repeat;
+  min-height: 289px;
+}
+
+.extra-bonus__wrapper {
+  font-family: @font-secondary;
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  color: @color-main;
+  padding-left: 58px;
+  padding-right: 61px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 80px;
+    background-image: url("../../img/icon-gift-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 58px;
+    transform: translate(-50%, 0);
+  }
+}
+
+.extra-bonus__text {
+  padding-top: 186px;
+  margin: 0;
+}
