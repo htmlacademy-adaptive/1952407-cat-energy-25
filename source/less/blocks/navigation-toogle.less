@@ -1,0 +1,35 @@
+.navigation-toogle {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  height: 28px;
+}
+
+.navigation-toogle__wrapper {
+  display: inline-block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background-color: @color-main-text;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: @color-main-text;
+    top: -8px;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: @color-main-text;
+    top: 8px;
+    left: 0;
+  }
+}
