@@ -2,17 +2,21 @@
   flex-grow: 1; // sticky footer
 }
 
-.main-page__container {
-  width: @mobile-width;
-  margin: 0 auto;
-}
-
 .main-page__intro {
   margin-top: 27px;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 117px;
+    margin-top: 64px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
 }
 
-.main-page__program.program { //можно так повысить специфичность?
+.main-page__program {
   margin-bottom: 20px;
 }
 
