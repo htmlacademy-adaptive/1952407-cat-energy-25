@@ -19,6 +19,14 @@
 
 .main-page__program {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 71px;
+  }
 }
 
 .main-page__title {
@@ -37,7 +45,7 @@
 }
 
 .main-page__description {
-  width: @mobile-width;
+  width: @mobile-ident;
   margin: 0 auto;
   margin-bottom: 39px;
   padding-right: 30px;
