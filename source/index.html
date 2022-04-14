@@ -8,32 +8,34 @@
   </head>
   <body class="page__body">
     <!-- шапка -->
-    <header class="main-header main-header--background-logo">
-      <div class="main-header__wrapper">
-        <a class="main-header__logo-link-img" href="#">
-          <img src="img/logo-img-mobile.svg" width="33" height="37" alt="Логотип cat energy.">
-        </a>
-        <a class="main-header__logo-link-text" href="#">
-          <img src="img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
-        </a>
-        <button class="main-header__toogle navigation-toogle navigation-toogle--close">
-          <span class="navigation-toogle__wrapper"></span>
-          <span class="visually-hidden">меню</span>
-        </button>
+    <header class="page__main-header main-header main-header--background-logo">
+      <div class="main-header__container">
+        <div class="main-header__wrapper">
+          <a class="main-header__logo-link-img" href="#">
+            <img src="img/logo-img-mobile.svg" width="33" height="37" alt="Логотип cat energy.">
+          </a>
+          <a class="main-header__logo-link-text" href="#">
+            <img src="img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
+          </a>
+          <button class="main-header__toogle navigation-toogle navigation-toogle--close">
+            <span class="navigation-toogle__wrapper"></span>
+            <span class="visually-hidden">меню</span>
+          </button>
+        </div>
+        <nav class="main-header__navigation navigation navigation--open">
+          <ul class="navigation__list navigation__list--index">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--curent">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-header__navigation navigation navigation--hidden">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--curent">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
     <!-- основное содержимое -->
     <main class="main-page">

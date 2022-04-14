@@ -9,3 +9,16 @@
   flex-direction: column;
   min-width: 320px;
 }
+
+.page__main-header {
+  @media (min-width: @tablet-width) {
+    width: @tablet-ident;
+    margin: 0 auto;
+    margin-top: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: 0;
+  }
+}
