@@ -84,42 +84,44 @@
       <!-- пример -->
       <section class="main-page__example example">
         <h2 class="example__title">Живой пример</h2>
-        <div class="example__wrapper">
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="example__wrapper-stats stats">
-            <ul class="stats__list">
-              <li class="stats__item">
-                <p class="stats__value">5 кг</p>
-                <p class="stats__description">Снижение веса</p>
-              </li>
-              <li class="stats__item">
-                <p class="stats__value">60 дней</p>
-                <p class="stats__description">Затрачено времени</p>
-              </li>
-            </ul>
-            <p class="stats__expenses">Затраты на питание: 15 000 РУБ.</p>
-          </div>
-        </div>
-        <!-- слайдер -->
-        <div class="example__wrapper-slider slider">
-          <div class="slider__wrapper-images">
-            <div class="slider__item slider__item--before">
-              <img src="img/before-mobile.png" width="280" height="232" alt="Пример как выглядит кот до диеты.">
-            </div>
-            <div class="slider__item slider__item--after">
-              <img src="img/after-mobile.png" width="243" height="232" alt="Пример как выглядит кот после диеты.">
+        <div class="example__container">
+          <div class="example__wrapper">
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__wrapper-stats stats">
+              <ul class="stats__list">
+                <li class="stats__item">
+                  <p class="stats__value">5 кг</p>
+                  <p class="stats__description">снижение веса</p>
+                </li>
+                <li class="stats__item">
+                  <p class="stats__value">60 дней</p>
+                  <p class="stats__description">затрачено времени</p>
+                </li>
+              </ul>
+              <p class="stats__expenses"><span>Затраты на питание:</span> 15 000 РУБ.</p>
             </div>
           </div>
-          <div class="slider__range">
-            <button class="slider__range-button slider__range-button--before" type="button">Было</button>
-            <!-- не понимаю правильно делаю ползунок или нет -->
-            <div class="slider__range-scale">
-              <!-- зеленый индикатор можно например псевдоэелементом добавить в мобилке классу slider__range-scale -->
-              <button class="slider__range-toogle" type="button">
-                <!-- кнопку стилизовать как ползунок для больших мониторов который ходит по slider__range-scale-->
-              </button>
+          <!-- слайдер -->
+          <div class="example__wrapper-slider slider">
+            <div class="slider__wrapper-images">
+              <div class="slider__item slider__item--before">
+                <img src="img/before-mobile.png" width="280" height="232" alt="Пример как выглядит кот до диеты.">
+              </div>
+              <div class="slider__item slider__item--after">
+                <img src="img/after-mobile.png" width="243" height="232" alt="Пример как выглядит кот после диеты.">
+              </div>
             </div>
-            <button class="slider__range-button slider__range-button--after" type="button">Стало</button>
+            <div class="slider__range">
+              <button class="slider__range-button slider__range-button--before" type="button">Было</button>
+              <!-- не понимаю правильно делаю ползунок или нет -->
+              <div class="slider__range-scale">
+                <!-- зеленый индикатор можно например псевдоэелементом добавить в мобилке классу slider__range-scale -->
+                <button class="slider__range-toogle" type="button">
+                  <!-- кнопку стилизовать как ползунок для больших мониторов который ходит по slider__range-scale-->
+                </button>
+              </div>
+              <button class="slider__range-button slider__range-button--after" type="button">Стало</button>
+            </div>
           </div>
         </div>
       </section>
