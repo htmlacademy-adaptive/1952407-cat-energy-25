@@ -60,15 +60,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .example {
+    border: none;
+    background-color: @color-background;
+  }
+
   .example__container {
     width: 1220px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-  }
-
-  .example__wrapper {
-    width: 436px;
+    // background-color: @color-background;
   }
 
   .example__title {
@@ -77,4 +79,15 @@
     padding: 0;
     margin-bottom: 146px;
   }
+
+  .example__wrapper {
+    width: 436px;
+    margin: 0;
+  }
+
+  .example__description {
+    padding: 0;
+    margin-bottom: 69px;
+  }
 }
+
