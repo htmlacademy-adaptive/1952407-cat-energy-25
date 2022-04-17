@@ -8,31 +8,34 @@
   </head>
   <body class="page__body">
     <!-- шапка -->
-    <header class="main-header main-header--background-logo">
-      <div class="main-header__wrapper">
-        <a class="main-header__logo-link-img" href="#">
-          <img src="img/logo-img-mobile.svg" width="33" height="37" alt="Логотип cat energy.">
-        </a>
-        <a class="main-header__logo-link-text" href="#">
-          <img src="img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
-        </a>
-        <button class="navigation-toogle navigation-toogle--close">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+    <header class="page__main-header main-header main-header--background-logo">
+      <div class="main-header__container">
+        <div class="main-header__wrapper">
+          <a class="main-header__logo-link-img" href="#">
+            <img src="img/logo-img-mobile.svg" width="33" height="37" alt="Логотип cat energy.">
+          </a>
+          <a class="main-header__logo-link-text" href="#">
+            <img src="img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
+          </a>
+          <button class="main-header__toogle navigation-toogle navigation-toogle--close">
+            <span class="navigation-toogle__wrapper"></span>
+            <span class="visually-hidden">меню</span>
+          </button>
+        </div>
+        <nav class="main-header__navigation navigation navigation--open">
+          <ul class="navigation__list navigation__list--index">
+            <li class="navigation__item">
+              <a class="navigation__link navigation__link--curent">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-header__navigation navigation navigation--hidden">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--curent">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
     </header>
     <!-- основное содержимое -->
     <main class="main-page">
@@ -42,7 +45,7 @@
         <h2 class="intro__title">Функциональное питание для котов</h2>
         <p class="intro__description">Занялся собой? Займись котом!</p>
         <img class="intro__image" src="img/intro-food-mobile.png" width="280" height="270" alt="Cat Energy pro с курицой">
-        <a class="intro__link button-link button-link--container button-link--small" href="form.html">Подобрать программу</a>
+        <a class="intro__link button-link button-link--small" href="form.html">Подобрать программу</a>
       </section>
       <!-- программа диеты -->
       <section class="main-page__program program">
@@ -74,49 +77,51 @@
             <p class="program-benefits__description">Замените один-два приема обычной еды на наше функциональное питание.</p>
           </li>
           <li class="program-benefits__item program-benefits__item--enjoy-changes">
-            <p class="program-benefits__description">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+            <p class="program-benefits__description">Уже через месяц наслаждайтесь изменениями к лучшему<br class="program-benefits__br">вашего питомца!</p>
           </li>
         </ul>
       </section>
       <!-- пример -->
       <section class="main-page__example example">
         <h2 class="example__title">Живой пример</h2>
-        <div class="example__wrapper">
-          <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="example__wrapper-stats stats">
-            <ul class="stats__list">
-              <li class="stats__item">
-                <p class="stats__value">5 кг</p>
-                <p class="stats__description">Снижение веса</p>
-              </li>
-              <li class="stats__item">
-                <p class="stats__value">60 дней</p>
-                <p class="stats__description">Затрачено времени</p>
-              </li>
-            </ul>
-            <p class="stats__expenses">Затраты на питание: 15 000 РУБ.</p>
-          </div>
-        </div>
-        <!-- слайдер -->
-        <div class="example__wrapper-slider slider">
-          <div class="slider__wrapper-images">
-            <div class="slider__item slider__item--before">
-              <img src="img/before-mobile.png" width="280" height="232" alt="Пример как выглядит кот до диеты.">
-            </div>
-            <div class="slider__item slider__item--after">
-              <img src="img/after-mobile.png" width="243" height="232" alt="Пример как выглядит кот после диеты.">
+        <div class="example__container">
+          <div class="example__wrapper">
+            <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__wrapper-stats stats">
+              <ul class="stats__list">
+                <li class="stats__item">
+                  <p class="stats__value">5 кг</p>
+                  <p class="stats__description">снижение веса</p>
+                </li>
+                <li class="stats__item">
+                  <p class="stats__value">60 дней</p>
+                  <p class="stats__description">затрачено времени</p>
+                </li>
+              </ul>
+              <p class="stats__expenses"><span>Затраты на питание:</span> 15 000 РУБ.</p>
             </div>
           </div>
-          <div class="slider__range">
-            <button class="slider__range-button slider__range-button--before" type="button">Было</button>
-            <!-- не понимаю правильно делаю ползунок или нет -->
-            <div class="slider__range-scale">
-              <!-- зеленый индикатор можно например псевдоэелементом добавить в мобилке классу slider__range-scale -->
-              <button class="slider__range-toogle" type="button">
-                <!-- кнопку стилизовать как ползунок для больших мониторов который ходит по slider__range-scale-->
-              </button>
+          <!-- слайдер -->
+          <div class="example__wrapper-slider slider">
+            <div class="slider__wrapper-images">
+              <div class="slider__item slider__item--before">
+                <img src="img/before-mobile.png" width="280" height="232" alt="Пример как выглядит кот до диеты.">
+              </div>
+              <div class="slider__item slider__item--after">
+                <img src="img/after-mobile.png" width="243" height="232" alt="Пример как выглядит кот после диеты.">
+              </div>
             </div>
-            <button class="slider__range-button slider__range-button--after" type="button">Стало</button>
+            <div class="slider__range">
+              <button class="slider__range-button slider__range-button--before" type="button">Было</button>
+              <!-- не понимаю правильно делаю ползунок или нет -->
+              <div class="slider__range-scale">
+                <!-- зеленый индикатор можно например псевдоэелементом добавить в мобилке классу slider__range-scale -->
+                <button class="slider__range-toogle" type="button">
+                  <!-- кнопку стилизовать как ползунок для больших мониторов который ходит по slider__range-scale-->
+                </button>
+              </div>
+              <button class="slider__range-button slider__range-button--after" type="button">Стало</button>
+            </div>
           </div>
         </div>
       </section>
@@ -126,8 +131,8 @@
       <section class="main-footer__invite-coop invite-coop">
         <div class="invite-coop__wrapper">
           <div class="invite-coop__contacts">
-            <h2 class="invite-coop__title">Приглашаем к сотрудничеству дилеров!</h2>
-            <address class="invite-coop__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+            <h2 class="invite-coop__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+            <address class="invite-coop__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
           </div>
         </div>
         <div class="main-footer__map">

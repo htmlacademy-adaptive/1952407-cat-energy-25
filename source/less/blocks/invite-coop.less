@@ -1,5 +1,5 @@
 .invite-coop__wrapper {
-  width: @mobile-width;
+  width: @mobile-ident;
   margin: 0 auto 26px auto;
 }
 
@@ -27,4 +27,48 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.42;
+  padding-left: 18px;
+}
+
+@media (min-width: @tablet-width) {
+  .invite-coop__wrapper {
+    width: 82%;
+    margin: 0 auto;
+  }
+
+  .invite-coop__contacts {
+    padding-top: 58px;
+    padding-bottom: 60px;
+  }
+
+  .invite-coop__title {
+    font-size: 20px;
+    line-height: 1.3;
+    width: 172px;
+    padding-top: 3px;
+  }
+
+  .invite-coop__address {
+    font-size: 16px;
+    line-height: 1.25;
+    width: 160px;
+    padding: 0;
+    text-align: right;
+
+    & span {
+      display: inline-block;
+      padding-top: 19px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .invite-coop__wrapper {
+    width: 565px;
+    margin: 0;
+  }
+
+  .invite-coop__contacts {
+    padding: 56px 80px;
+  }
 }

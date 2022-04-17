@@ -1,29 +1,74 @@
 .main-header {
   position: relative;
+
+  &--background-logo {
+    &::after {
+      content: "";
+      height: 302px;
+      width: 100%;
+      position: absolute;
+      background: linear-gradient(fade(@color-brand, 85%), fade(@color-brand, 85%)),
+        url("../../img/header-background-cat-color-mobile.jpg") center/cover no-repeat;
+      background-color: @color-brand;
+      z-index: -1;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--background-logo {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--background-logo {
+      &::after {
+        content: "";
+        height: 694px;
+        width: 50%;
+        position: absolute;
+        background: linear-gradient(fade(@color-brand, 85%), fade(@color-brand, 85%)),
+          url("../../img/header-background-cat-color-desktop.jpg") center/cover no-repeat;
+        background-color: @color-brand;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
 }
 
-.main-header--background-logo {
-  &::after {
-    content: "";
-    height: 302px;
-    width: 100%;
-    position: absolute;
-    background: linear-gradient(fade(@color-brand, 85%), fade(@color-brand, 85%)),
-      url("../../img/header-background-cat-color-mobile.jpg") center/cover no-repeat;
-    background-color: @color-brand;
-    z-index: -1;
+.main-header__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    margin-top: 60px;
   }
 }
 
 .main-header__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   vertical-align: middle;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
-  padding-bottom: 14px;
+  padding-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: start;
+    width: 174px;
+    padding: 0;
+  }
 }
 
 .main-header__logo-link-img {
@@ -33,11 +78,17 @@
 }
 
 .main-header__logo-link-text {
+  margin-left: -9px;
+
   & img {
     vertical-align: middle;
   }
+
+  @media (min-width: @tablet-width) {
+    margin-left: 12px;
+  }
 }
 
-.main-header__navigation {
+.main-header__navigation--js-position {
   position: absolute;
 }

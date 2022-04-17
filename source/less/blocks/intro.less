@@ -1,3 +1,16 @@
+.intro {
+  @media (min-width: @desktop-width) {
+    max-width: 1220px;
+    padding-left: 80px;
+  }
+}
+
+.intro__title {
+  @media (min-width: @desktop-width) {
+    max-width: 514px;
+  }
+}
+
 .intro__title,
 .intro__description {
   margin: 0;
@@ -6,6 +19,12 @@
   line-height: 1;
   color: @color-main;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    color: @color-main-text;
+    font-size: 60px;
+    text-align: left;
+  }
 }
 
 .intro__description {
@@ -13,6 +32,16 @@
   text-transform: uppercase;
   margin-top: 25px;
   margin-bottom: 29px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    margin-top: 41px;
+    margin-bottom: 49px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 52px;
+  }
 }
 
 .intro__image {
