@@ -1,3 +1,12 @@
+.contacts-data {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-data:not(:last-child) {
+  margin-bottom: 14px;
+}
+
 .contacts-data__text,
 .contacts-data__input {
   font-family: @font-main;
@@ -5,4 +14,14 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @color-text;
+}
+
+.contacts-data__input {
+  width: 100%;
+  padding: 13px 15px;
+}
+
+.contacts-data__text {
+  flex-shrink: 0;
+  margin-right: 11px;
 }

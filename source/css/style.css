@@ -496,6 +496,7 @@ body {
 }
 .main-page__title--form {
   border-bottom: none;
+  margin: 0;
   padding-bottom: 37px;
 }
 .main-page__description {
@@ -1482,6 +1483,18 @@ body {
 .form-selection__item--program:last-child {
   margin-bottom: 19px;
 }
+.form-selection__label {
+  display: flex;
+  align-items: center;
+}
+.form-selection__input-text {
+  margin-right: 13px;
+  flex-shrink: 0;
+}
+.form-selection__input {
+  width: 100%;
+  padding: 13px 15px;
+}
 .form-selection__input-text,
 .form-selection__input,
 .form-selection__habits {
@@ -1495,6 +1508,7 @@ body {
   color: #000000;
   width: 100%;
   min-height: 150px;
+  padding: 13px 10px 13px 15px;
 }
 .form-selection__submit {
   text-align: center;
@@ -1504,11 +1518,19 @@ body {
 }
 .form-selection__button {
   margin-bottom: 21px;
+  width: calc(100% - 40px);
 }
 .form-selection__required-text {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 1.14;
+}
+.contacts-data {
+  display: flex;
+  align-items: center;
+}
+.contacts-data:not(:last-child) {
+  margin-bottom: 14px;
 }
 .contacts-data__text,
 .contacts-data__input {
@@ -1517,6 +1539,14 @@ body {
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+}
+.contacts-data__input {
+  width: 100%;
+  padding: 13px 15px;
+}
+.contacts-data__text {
+  flex-shrink: 0;
+  margin-right: 11px;
 }
 .radio-control__control-label {
   font-family: "Oswald", "Arial", sans-serif;
