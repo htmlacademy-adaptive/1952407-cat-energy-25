@@ -40,7 +40,9 @@
     <!-- основное содержимое -->
     <main class="main-page main-page--container">
       <h1 class="main-page__title main-page__title--form">Подбор программы</h1>
-      <p class="main-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <div class="main-page__description-wrapper">
+        <p class="main-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <section class="main-page__questionnaire">
         <h2 class="visually-hidden">Анкета с данными о коте</h2>
         <form class="main-page__form form-selection" action="https://echo.htmlacademy.ru/" method="get">
@@ -163,7 +165,7 @@
               </li>
             </ul>
           </fieldset>
-          <p class="form-selection__submit">
+          <p class="form-selection__wrapper">
             <button class="form-selection__button button-link button-link--container button" type="submit">Отправить заявку</button>
             <span class="form-selection__required-text">* — Обязательные поля</span>
           </p>
