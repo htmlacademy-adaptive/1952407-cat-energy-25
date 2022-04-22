@@ -1,3 +1,12 @@
+.contacts-data {
+  display: flex;
+  align-items: center;
+}
+
+.contacts-data:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 .contacts-data__text,
 .contacts-data__input {
   font-family: @font-main;
@@ -5,4 +14,40 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @color-text;
+}
+
+.contacts-data__input {
+  width: 100%;
+  padding: 13px 15px;
+}
+
+.contacts-data__text {
+  flex-shrink: 0;
+  margin-right: 11px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts-data__text,
+  .contacts-data__input {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .contacts-data:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .contacts-data__text {
+    margin-right: 20px;
+  }
+
+  .contacts-data__input {
+    padding: 9px 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts-data:not(:last-child) {
+    margin-bottom: 0;
+  }
 }

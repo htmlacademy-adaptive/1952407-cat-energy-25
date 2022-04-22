@@ -40,7 +40,9 @@
     <!-- основное содержимое -->
     <main class="main-page main-page--container">
       <h1 class="main-page__title main-page__title--form">Подбор программы</h1>
-      <p class="main-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <div class="main-page__description-wrapper">
+        <p class="main-page__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <section class="main-page__questionnaire">
         <h2 class="visually-hidden">Анкета с данными о коте</h2>
         <form class="main-page__form form-selection" action="https://echo.htmlacademy.ru/" method="get">
@@ -97,7 +99,7 @@
           </div>
           <fieldset class="form-selection__group form-selection__group--position">
             <legend class="form-selection__legend">Контактные данные (владельца кота)</legend>
-            <label class="form-selection__label contacts-data">
+            <label class="contacts-data">
               <span class="contacts-data__text">E-mail:*</span>
               <input class="contacts-data__input" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
               <svg class="contacts-data__input-icon" width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -108,7 +110,7 @@
                 <path d="M17.35 3.02975L9.00002 9.5242L0.65 3.02975V1.49766H3.5L9.00002 1.49766H14H17.35V3.02975Z" stroke="#222222" stroke-width="1.3"/>
               </svg>
             </label>
-            <label class="form-selection__label contacts-data">
+            <label class="contacts-data">
               <span class="contacts-data__text">Телефон:*</span>
               <input class="contacts-data__input" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
               <svg class="contacts-data__input-icon" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -163,7 +165,7 @@
               </li>
             </ul>
           </fieldset>
-          <p class="form-selection__submit">
+          <p class="form-selection__wrapper">
             <button class="form-selection__button button-link button-link--container button" type="submit">Отправить заявку</button>
             <span class="form-selection__required-text">* — Обязательные поля</span>
           </p>
@@ -175,7 +177,7 @@
       <section class="main-footer__invite-coop invite-coop invite-coop--color">
         <div class="invite-coop__wrapper">
           <div class="invite-coop__contacts">
-            <h2 class="invite-coop__title">Приглашаем к сотрудничеству дилеров!</h2>
+            <h2 class="invite-coop__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h2>
             <address class="invite-coop__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
           </div>
         </div>
