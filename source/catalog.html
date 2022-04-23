@@ -17,12 +17,12 @@
           <a class="main-header__logo-link-text" href="index.html">
             <img src="img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
           </a>
-          <button class="main-header__toogle navigation-toogle navigation-toogle--close">
+          <button class="main-header__toogle navigation-toogle navigation-toogle--closed">
             <span class="navigation-toogle__wrapper"></span>
             <span class="visually-hidden">меню</span>
           </button>
         </div>
-        <nav class="main-header__navigation navigation navigation--open">
+        <nav class="main-header__navigation navigation navigation--closed navigation--nojs">
           <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link" href="index.html">Главная</a>
@@ -34,8 +34,8 @@
               <a class="navigation__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
+        </nav>
       </div>
-      </nav>
     </header>
     <!-- основное содержимое -->
     <main class="main-page main-page--container">
@@ -334,5 +334,6 @@
         </div>
       </section>
     </footer>
+    <script src="./js/nav-toogle.js"></script>
   </body>
 </html>

@@ -4,13 +4,19 @@
   line-height: 1;
   width: 100%;
   background-color: @color-main;
+  position: absolute;
 }
 
-.navigation--hidden {
+.navigation--closed {
   display: none;
 }
 
-.navigation--open {
+.navigation--opened {
+  display: block;
+}
+
+.navigation--nojs {
+  position: static;
   display: block;
 }
 
@@ -42,6 +48,11 @@
     font-weight: 400;
     background-color: transparent;
     width: auto;
+    position: static;
+  }
+
+  .navigation--closed {
+    display: block;
   }
 
   .navigation__list {
