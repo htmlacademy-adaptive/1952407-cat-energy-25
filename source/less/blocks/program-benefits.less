@@ -13,20 +13,75 @@
 
 .program-benefits__list {
   .reset-list();
-  margin-bottom: 49px;
+  margin-bottom: 51px;
   font-family: @font-secondary;
   font-size: 14px;
   line-height: 1.28;
 }
 
 .program-benefits__item {
+  position: relative;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+
   &:not(:last-child) {
     margin-bottom: 24px;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: @color-brand;
+    top: -1px;
+    left: 0;
+  }
+
+  &--healthy {
+    &::before {
+      background-image: url("../../img/icon_leaf.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--comfortably {
+    &::before {
+      background-image: url("../../img/icon_tub.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--profitable {
+    &::before {
+      background-image: url("../../img/icon_eat.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &--enjoy-changes {
+    &::before {
+      background-image: url("../../img/icon_alarm.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    & .program-benefits__description {
+      @media (max-width: 767px) {
+        padding-top: 0;
+      }
+    }
   }
 }
 
 .program-benefits__description {
   margin: 0;
+  padding-left: 80px;
+  padding-top: 3px;
 }
 
 .program-benefits__br {
@@ -41,7 +96,7 @@
   .program-benefits__title {
     font-size: 60px;
     line-height: 1;
-    margin-bottom: 63px;
+    margin-bottom: 72px;
   }
 
   .program-benefits__list {
@@ -50,20 +105,53 @@
     grid-template-columns: 1fr 1fr;
     column-gap: 59px;
     row-gap: 37px;
+    counter-reset: program-counter;
   }
 
   .program-benefits__item {
     min-height: 280px;
+    align-items: start;
+    position: relative;
+    counter-increment: program-counter;
 
     &:not(:last-child) {
       margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: counter(program-counter);
+      position: absolute;
+      font-family: @font-main;
+      font-size: 280px;
+      line-height: 1;
+      color: #f2f2f2;
+      z-index: -1;
+      top: -38px;
+      left: 35%;
+    }
+
+    &:nth-child(1) {
+      &::after {
+        left: 36.4%;
+      }
     }
   }
 
   .program-benefits__description {
     font-size: 16px;
     line-height: 1.5;
-    padding-right: 60px;
+    width: 76%;
+    max-width: 300px;
+    padding-left: 0;
+    padding-top: 113px;
   }
 
   .program-benefits__br {
@@ -78,10 +166,20 @@
 
   .program-benefits__list {
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 75px;
+    column-gap: 80px;
+    margin-bottom: 0;
+  }
+
+  .program-benefits__item::after {
+    left: 46%;
+  }
+
+  .program-benefits__item:nth-child(1)::after {
+    left: 48%;
   }
 
   .program-benefits__description {
     padding-right: 0;
+    width: auto;
   }
 }
