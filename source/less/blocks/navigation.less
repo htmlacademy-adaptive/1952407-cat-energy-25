@@ -76,6 +76,14 @@
   .navigation__link {
     margin: 0;
     padding: 10px 15px;
+
+    &:hover {
+      color: fade(@color-main-text, 60%);
+    }
+
+    &:active {
+      color: fade(@color-main-text, 30%);
+    }
   }
 
   .navigation__link--curent {
@@ -89,6 +97,14 @@
       background-color: @color-brand;
       bottom: 0;
       left: 15px;
+    }
+
+    &:hover::after {
+      background-color: fade(@color-brand, 60%);
+    }
+
+    &:active::after {
+      background-color: fade(@color-brand, 30%);
     }
   }
 }
@@ -127,11 +143,27 @@
 
   .navigation__list--index .navigation__link {
     color: @color-main;
+
+    &:hover {
+      color: fade(@color-main, 60%);
+    }
+
+    &:active {
+      color: fade(@color-main, 30%);
+    }
   }
 
   .navigation__list--index .navigation__link--curent {
     &::after {
       background-color: @color-main;
+    }
+
+    &:hover::after {
+      background-color: fade(@color-main, 60%);
+    }
+
+    &:active::after {
+      background-color: fade(@color-main, 30%);
     }
   }
 }
