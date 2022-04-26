@@ -105,20 +105,18 @@
           <div class="example__wrapper-slider slider">
             <div class="slider__wrapper-images">
               <div class="slider__item slider__item--before">
-                <img src="img/before-mobile.png" width="280" height="232" alt="Пример как выглядит кот до диеты.">
+                <img class="slider__image" src="img/before-mobile.png" width="280" height="232" alt="Пример как выглядит кот до диеты.">
               </div>
               <div class="slider__item slider__item--after">
-                <img src="img/after-mobile.png" width="243" height="232" alt="Пример как выглядит кот после диеты.">
+                <img class="slider__image slider__image--hidden" src="img/after-mobile.png" width="243" height="232" alt="Пример как выглядит кот после диеты.">
               </div>
             </div>
+            <!-- ползунок -->
             <div class="slider__range">
               <button class="slider__range-button slider__range-button--before" type="button">Было</button>
-              <!-- не понимаю правильно делаю ползунок или нет -->
               <div class="slider__range-scale">
-                <!-- зеленый индикатор можно например псевдоэелементом добавить в мобилке классу slider__range-scale -->
-                <button class="slider__range-toogle" type="button">
-                  <!-- кнопку стилизовать как ползунок для больших мониторов который ходит по slider__range-scale-->
-                </button>
+                <!-- для мобильной версии при переключении слайдера повесить класс slider__range-toogle--after на кнопку ниже -->
+                <button class="slider__range-toogle" type="button"></button>
               </div>
               <button class="slider__range-button slider__range-button--after" type="button">Стало</button>
             </div>

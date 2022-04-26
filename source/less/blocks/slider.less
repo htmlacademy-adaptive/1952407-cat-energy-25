@@ -3,17 +3,26 @@
   margin: 0 auto;
 }
 
+.slider__wrapper-images {
+  margin-bottom: 20px;
+}
+
 .slider__item {
   text-align: center;
+}
 
-  & img {
-    vertical-align: middle;
-  }
+.slider__image {
+  vertical-align: middle;
+}
+
+.slider__image--hidden {
+  display: none;
 }
 
 .slider__range {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 210px;
   margin: 0 auto;
 }
@@ -25,6 +34,41 @@
   line-height: 1.25;
   text-align: center;
   text-transform: uppercase;
+  border: none;
+}
+
+.slider__range-button--before {
+  margin-right: 13px;
+}
+
+.slider__range-button--after {
+  margin-left: 13px;
+}
+
+.slider__range-scale {
+  height: 14px;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+  position: relative;
+}
+
+.slider__range-toogle {
+  height: 6px;
+  width: 43%;
+  background-color: @color-brand;
+  border: none;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 6px;
+}
+
+.slider__range-toogle--after {
+  left: auto;
+  right: 6px;
 }
 
 @media (min-width: @tablet-width) {
@@ -32,6 +76,57 @@
     width: auto;
     margin: auto;
     background-color: @color-background;
+  }
+
+  .slider__range {
+    width: 566px;
+  }
+
+  .slider__range-button {
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 0;
+    padding-bottom: 1px;
+    border-bottom: 1px dotted #dcdcdc;
+  }
+
+  .slider__range-button--before {
+    margin-right: 24px;
+  }
+
+  .slider__range-button--after {
+    margin-left: 22px;
+    margin-right: -4px;
+  }
+
+  .slider__range-scale {
+    height: 6px;
+    background-color: #dcdcdc;
+  }
+
+  .slider__range-toogle {
+    height: 34px;
+    width: 34px;
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16);
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background-color: @color-brand;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
@@ -41,5 +136,9 @@
     margin: 0;
     padding: 0;
     width: 591px;
+  }
+
+  .slider__wrapper-images {
+    margin-bottom: 59px;
   }
 }
