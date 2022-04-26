@@ -58,6 +58,7 @@
   .navigation__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-right: -15px;
   }
 
@@ -139,6 +140,10 @@
     &::after {
       background-color: @color-brand;
     }
+  }
+
+  .navigation__list--index {
+    max-width: 625px;
   }
 
   .navigation__list--index .navigation__link {

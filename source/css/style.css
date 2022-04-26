@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Oswald";
-  src: url("..//fonts/oswaldmedium.woff2"), url("..//fonts/oswaldmedium.woff");
+  src: url("../fonts/oswaldmedium.woff2"), url("../fonts/oswaldmedium.woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Oswald";
-  src: url("..//fonts/oswaldregular.woff2"), url("..//fonts/oswaldregular.woff");
+  src: url("../fonts/oswaldregular.woff2"), url("../fonts/oswaldregular.woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -117,7 +117,7 @@ body {
   height: 302px;
   width: 100%;
   position: absolute;
-  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/header-background-cat-color-mobile.jpg") center / cover no-repeat;
+  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/header-background-cat-color-mobile.jpg") center / cover no-repeat;
   background-color: #68B738;
   z-index: -1;
 }
@@ -132,7 +132,7 @@ body {
     height: 694px;
     width: 50%;
     position: absolute;
-    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/header-background-cat-color-desktop.jpg") center / cover no-repeat;
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/header-background-cat-color-desktop.jpg") center / cover no-repeat;
     background-color: #68B738;
     top: 0;
     right: 0;
@@ -251,6 +251,7 @@ body {
   .navigation__list {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin-right: -15px;
   }
   .navigation__item {
@@ -311,6 +312,9 @@ body {
   }
   .navigation__link--curent::after {
     background-color: #68B738;
+  }
+  .navigation__list--index {
+    max-width: 625px;
   }
   .navigation__list--index .navigation__link {
     color: #ffffff;
@@ -477,7 +481,7 @@ body {
   position: absolute;
   width: 36px;
   height: 50px;
-  background-image: url("../../img/cat-icon-mobile.svg");
+  background-image: url("../img/cat-icon-mobile.svg");
   background-repeat: no-repeat;
   top: 21px;
   left: 29px;
@@ -506,7 +510,7 @@ body {
   position: absolute;
   width: 67px;
   height: 28px;
-  background-image: url("../../img/tiger-icon-mobile.svg");
+  background-image: url("../img/tiger-icon-mobile.svg");
   background-repeat: no-repeat;
   top: 35px;
   left: 13px;
@@ -608,7 +612,7 @@ body {
   position: absolute;
   width: 24px;
   height: 12px;
-  background: url("../../img/arrow-program.svg") no-repeat;
+  background: url("../img/arrow-program.svg") no-repeat;
   background-position: right center;
   top: 50%;
   transform: translate(0, -50%);
@@ -767,22 +771,22 @@ body {
   left: 0;
 }
 .program-benefits__item--healthy::before {
-  background-image: url("../../img/icon_leaf.svg");
+  background-image: url("../img/icon_leaf.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 .program-benefits__item--comfortably::before {
-  background-image: url("../../img/icon_tub.svg");
+  background-image: url("../img/icon_tub.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 .program-benefits__item--profitable::before {
-  background-image: url("../../img/icon_eat.svg");
+  background-image: url("../img/icon_eat.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 .program-benefits__item--enjoy-changes::before {
-  background-image: url("../../img/icon_alarm.svg");
+  background-image: url("../img/icon_alarm.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1825,7 +1829,7 @@ body {
   }
 }
 .extra-bonus {
-  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../img/extra-bonus-background-cat-mobile.jpg") center / cover no-repeat;
+  background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/extra-bonus-background-cat-mobile.jpg") center / cover no-repeat;
   min-height: 289px;
 }
 .extra-bonus__wrapper {
@@ -1843,7 +1847,7 @@ body {
   position: absolute;
   width: 78px;
   height: 80px;
-  background-image: url("../../img/icon-gift-mobile.svg");
+  background-image: url("../img/icon-gift-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
   top: 58px;
