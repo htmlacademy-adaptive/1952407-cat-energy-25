@@ -8,12 +8,12 @@
 }
 
 .contacts__logo-text {
-  padding: 39px 0 32px 0;
+  padding: 36px 0 25px 0;
   text-align: center;
 }
 
 .contacts__social {
-  padding: 21px 0;
+  padding: 18px 0 12px;
   border-top: 1px solid #d9d9d9;
 }
 
@@ -21,17 +21,59 @@
   .reset-list();
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contacts__item-social {
+  width: 52px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.contacts__link {
+  display: block;
+  width: 28px;
+  height: 22px;
+
+  &:hover .contacts__icon-social {
+    color: @color-brand;
+  }
+
+  &:active .contacts__icon-social {
+    color: fade(@color-brand, 30%);
+  }
+}
+
+.contacts__icon-social {
+  width: 100%;
+  height: 100%;
+  color: #666666;
 }
 
 .contacts__academy-logo {
   border-top: 1px solid #d9d9d9;
-  padding-top: 28px;
-  padding-bottom: 32px;
+  padding-top: 22px;
+  padding-bottom: 26px;
 }
 
 .contacts__logo-link,
 .contacts__link {
   vertical-align: middle;
+}
+
+.contacts__logo-link {
+  &:hover {
+    & .contacts__icon-cat-energy {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    & .contacts__icon-cat-energy {
+      opacity: 0.6;
+    }
+  }
 }
 
 .contacts__link-copyright {
@@ -40,10 +82,25 @@
   align-items: center;
   text-decoration: none;
   color: inherit;
+
+  &:hover {
+    & .contacts__logo-copyright {
+      fill: @color-brand;
+    }
+  }
+
+  &:active {
+    & .contacts__logo-copyright,
+    .contacts__copyright-company-name {
+      fill: fade(@color-brand, 30%);
+      color: fade(@color-text, 30%);
+    }
+  }
 }
 
 .contacts__copyright-company-name {
   color: @color-text;
+  font-family: @font-secondary;
   font-size: 16px;
   line-height: 18px;
 }
@@ -53,13 +110,15 @@
     width: @tablet-ident;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 57px;
+    // align-items: center;
+    padding-top: 59px;
     padding-bottom: 55px;
   }
 
   .contacts__logo-text {
     padding: 0;
+    margin-top: 1px;
+    margin-right: 26px;
   }
 
   .contacts__social {
@@ -70,10 +129,12 @@
   .contacts__academy-logo {
     border: none;
     padding: 0;
+    margin-top: -2px;
   }
 
   .contacts__copyright-company-name {
     line-height: 18.4px;
+    margin-right: 24px;
   }
 }
 
