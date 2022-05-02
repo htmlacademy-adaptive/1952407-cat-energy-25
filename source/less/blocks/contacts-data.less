@@ -1,6 +1,7 @@
 .contacts-data {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .contacts-data:not(:last-child) {
@@ -25,6 +26,13 @@
 .contacts-data__text {
   flex-shrink: 0;
   margin-right: 11px;
+}
+
+.contacts-data__input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 14px;
 }
 
 @media (min-width: @tablet-width) {

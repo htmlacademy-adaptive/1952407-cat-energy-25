@@ -9,8 +9,10 @@
   flex-direction: column;
   min-width: 320px;
 
-  &--catalog .page__main-header {
-    margin-bottom: 82px;
+  @media (min-width: @desktop-width) {
+    &--catalog .page__main-header {
+      margin-bottom: 82px;
+    }
   }
 
   @media (min-width: @tablet-width) {
