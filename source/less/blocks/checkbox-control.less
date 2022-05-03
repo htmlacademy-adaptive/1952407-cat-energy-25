@@ -1,0 +1,96 @@
+.checkbox-control {
+  position: relative;
+  display: block;
+  padding-left: 45px;
+
+  &:hover {
+    & .checkbox-control__control-mark {
+      border-color: #bababa;
+    }
+  }
+
+  &:active {
+    & .checkbox-control__control-mark {
+      border-color: fade(#bababa, 30%);
+    }
+
+    & .checkbox-control__control-label {
+      color: fade(#222222, 30%);
+    }
+
+    & .checkbox-control__control-input[type="checkbox"]:checked + .checkbox-control__control-mark::after,
+    .checkbox-control__control-input[type="checkbox"]:checked + .checkbox-control__control-mark::before {
+      background-color: fade(#68b738, 30%);
+      //вложеность меньше сделать не представляется возможным. если только делать opacity 0.3 на класс checkbox-control:active, но такой способ хуже чем этот
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+.checkbox-control__control-mark {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+  top: 0;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: -5px;
+  }
+}
+
+.checkbox-control__control-input[type="checkbox"]:checked + .checkbox-control__control-mark::after {
+  content: "";
+  position: absolute;
+  background-color: @color-brand;
+  width: 16px;
+  height: 2px;
+  top: 12.7px;
+  left: 9px;
+  transform: rotate(-48deg);
+
+  @media (min-width: @tablet-width) {
+    width: 22px;
+    top: 17.6px;
+    left: 12.4px;
+  }
+}
+
+.checkbox-control__control-input[type="checkbox"]:checked + .checkbox-control__control-mark::before {
+  content: "";
+  position: absolute;
+  background-color: @color-brand;
+  width: 10px;
+  height: 2px;
+  top: 15px;
+  left: 4px;
+  transform: rotate(48deg);
+
+  @media (min-width: @tablet-width) {
+    width: 13px;
+    top: 22px;
+    left: 5px;
+  }
+}
+
+.checkbox-control__control-label {
+  font-family: @font-main;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @color-main-text;
+}
+
+@media (min-width: @tablet-width) {
+  .checkbox-control__control-label {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body">
+  <body class="page__body page__body--form">
     <!-- шапка -->
     <header class="page__main-header main-header">
       <div class="main-header__container">
@@ -47,22 +47,22 @@
         <h2 class="visually-hidden">Анкета с данными о коте</h2>
         <form class="main-page__form form-selection" action="https://echo.htmlacademy.ru/" method="get">
           <div class="form-selection__container">
-            <fieldset class="form-selection__group form-selection__group--line">
+            <fieldset class="form-selection__group">
               <legend class="visually-hidden">Личные данные кота</legend>
-              <ul class="form-selection__list">
-                <li class="form-selection__item form-selection__item--personal">
+              <ul class="form-selection__list form-selection__list--personal">
+                <li class="form-selection__item">
                   <label class="form-selection__label">
                     <span class="form-selection__input-text">Имя:*</span>
                     <input class="form-selection__input" type="text" name="cat-name" placeholder="Барсик">
                   </label>
                 </li>
-                <li class="form-selection__item form-selection__item--personal">
+                <li class="form-selection__item">
                   <label class="form-selection__label">
                     <span class="form-selection__input-text">Вес (кг):*</span>
                     <input class="form-selection__input" type="number" name="weight" placeholder="7" min="0" max="50" step="0.1">
                   </label>
                 </li>
-                <li class="form-selection__item form-selection__item--personal">
+                <li class="form-selection__item">
                   <label class="form-selection__label">
                     <span class="form-selection__input-text">Возраст (лет):</span>
                     <input class="form-selection__input" type="number" name="age" placeholder="7" min="0" max="30" step="0.1">
@@ -70,17 +70,17 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="form-selection__group form-selection__group--line">
+            <fieldset class="form-selection__group">
               <legend class="visually-hidden">Выберите программу диеты</legend>
-              <ul class="form-selection__list">
-                <li class="form-selection__item form-selection__item--program">
+              <ul class="form-selection__list form-selection__list--program">
+                <li class="form-selection__item">
                   <label class="form-selection__control radio-control">
                     <input class="radio-control__control-input visually-hidden" type="radio" name="program-group" value="weight-loss" checked>
                     <span class="radio-control__control-mark"></span>
                     <span class="radio-control__control-label">Похудение</span>
                   </label>
                 </li>
-                <li class="form-selection__item form-selection__item--program">
+                <li class="form-selection__item">
                   <label class="form-selection__control radio-control">
                     <input class="radio-control__control-input visually-hidden" type="radio" name="program-group" value="gain">
                     <span class="radio-control__control-mark"></span>
@@ -97,7 +97,7 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="form-selection__group form-selection__group--position">
+          <fieldset class="form-selection__group">
             <legend class="form-selection__legend">Контактные данные (владельца кота)</legend>
             <label class="contacts-data">
               <span class="contacts-data__text">E-mail:*</span>
@@ -126,41 +126,43 @@
               </svg>
             </label>
           </fieldset>
-          <fieldset class="form-selection__group form-selection__group--position">
-            <legend class="form-selection__legend form-selection__legend--comment">
+          <fieldset class="form-selection__group">
+            <legend class="form-selection__legend">
               <label class="form-selection__text" for="habits">Комментарий</label>
             </legend>
             <textarea class="form-selection__habits" name="habits" id="habits" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
-          <fieldset class="form-selection__group form-selection__group--position">
-            <legend class="form-selection__legend form-selection__legend--additionally">Дополнительно</legend>
+          <fieldset class="form-selection__group">
+            <legend class="form-selection__legend">
+              <span class="form-selection__text">Дополнительно</span>
+            </legend>
             <ul class="form-selection__list form-selection__list--additionally">
               <li class="form-selection__item">
-                <label class="form-selection__label control">
-                  <input class="visually-hidden control__input" type="checkbox" name="sweetener" checked>
-                  <span class="control__mark"></span>
-                  <span class="control__label">Cахарозаменитель</span>
+                <label class="form-selection__label checkbox-control">
+                  <input class="checkbox-control__control-input visually-hidden" type="checkbox" name="sweetener" checked>
+                  <span class="checkbox-control__control-mark"></span>
+                  <span class="checkbox-control__control-label">Cахарозаменитель</span>
                 </label>
               </li>
               <li class="form-selection__item">
-                <label class="form-selection__label control">
-                  <input class="visually-hidden control-input" type="checkbox" name="water">
-                  <span class="control-mark"></span>
-                  <span class="control__label">Питьевая вода</span>
+                <label class="form-selection__label checkbox-control">
+                  <input class="checkbox-control__control-input visually-hidden" type="checkbox" name="water">
+                  <span class="checkbox-control__control-mark"></span>
+                  <span class="checkbox-control__control-label">Питьевая вода</span>
                 </label>
               </li>
               <li class="form-selection__item">
-                <label class="form-selection__label control">
-                  <input class="visually-hidden control-input" type="checkbox" name="milk">
-                  <span class="control__mark"></span>
-                  <span class="control__label">Молоко</span>
+                <label class="form-selection__label checkbox-control">
+                  <input class="checkbox-control__control-input visually-hidden" type="checkbox" name="milk">
+                  <span class="checkbox-control__control-mark"></span>
+                  <span class="checkbox-control__control-label">Молоко</span>
                 </label>
               </li>
               <li class="form-selection__item">
-                <label class="form-selection__label control">
-                  <input class="visually-hidden control__input" type="checkbox" name="vitamins">
-                  <span class="control__mark"></span>
-                  <span class="control__label">Витамины</span>
+                <label class="form-selection__label checkbox-control">
+                  <input class="checkbox-control__control-input visually-hidden" type="checkbox" name="vitamins">
+                  <span class="checkbox-control__control-mark"></span>
+                  <span class="checkbox-control__control-label">Витамины</span>
                 </label>
               </li>
             </ul>
