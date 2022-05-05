@@ -11,6 +11,11 @@
         url("../img/header-background-cat-color-mobile.jpg") center/cover no-repeat;
       background-color: @color-brand;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background: linear-gradient(fade(@color-brand, 85%), fade(@color-brand, 85%)),
+          url("../img/header-background-cat-color-mobile@2x.jpg") center/cover no-repeat;
+      }
     }
   }
 
@@ -34,6 +39,11 @@
         background-color: @color-brand;
         top: 0;
         right: 0;
+
+        @media (min-resolution: 2dppx) {
+          background: linear-gradient(fade(@color-brand, 85%), fade(@color-brand, 85%)),
+            url("../img/header-background-cat-color-desktop@2x.jpg") center/cover no-repeat;
+        }
       }
     }
   }
@@ -49,7 +59,7 @@
   @media (min-width: @desktop-width) {
     width: 1220px;
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 53px;
   }
 }
 
@@ -66,14 +76,29 @@
 
   @media (min-width: @tablet-width) {
     justify-content: start;
-    width: 174px;
+    width: 224px;
     padding: 0;
+    margin-top: -6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
 
 .main-header__logo-link-img {
   & img {
     vertical-align: middle;
+
+    @media (min-width: @tablet-width) {
+      width: 174px;
+      height: auto;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 202px;
+      height: auto;
+    }
   }
 
   &:hover {
@@ -101,7 +126,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 12px;
+    display: none;
   }
 }
 

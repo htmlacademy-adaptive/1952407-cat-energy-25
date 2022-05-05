@@ -16,7 +16,11 @@
       <div class="main-header__container">
         <div class="main-header__wrapper">
           <a class="main-header__logo-link-img" href="#">
-            <img src="img/logo-img-mobile.svg" width="33" height="37" alt="Логотип cat energy.">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-img-mobile.svg" width="33" height="37" alt="Логотип cat energy.">
+            </picture>
           </a>
           <a class="main-header__logo-link-text" href="#">
             <img src="img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
@@ -50,7 +54,11 @@
           <h2 class="intro__title">Функциональное питание для котов</h2>
           <p class="intro__description">Занялся собой? Займись котом!</p>
           <div class="intro__picture-wrapper">
-            <img class="intro__image" src="img/intro-food-mobile.png" width="280" height="270" alt="Cat Energy pro с курицой">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/intro-food-desktop.png 1x, img/intro-food-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/intro-food-tablet.png 1x, img/intro-food-tablet@2x.png 2x">
+              <img class="intro__image" src="img/intro-food-mobile.png" srcset="img/intro-food-mobile@2x.png 2x" width="280" height="270" alt="Cat Energy pro с курицой">
+            </picture>
           </div>
           <a class="intro__link button-link button-link--small" href="form.html">Подобрать программу</a>
         </div>
