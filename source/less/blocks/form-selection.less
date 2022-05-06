@@ -19,64 +19,10 @@
   border: none;
 }
 
-.form-selection__group:nth-of-type(1) {
-  margin-bottom: 25px;
-
+.form-selection__group:nth-of-type(1),
+.form-selection__group:nth-of-type(2),
+.form-selection__group:nth-of-type(3) {
   & .form-selection__legend {
-    //такой вариант более универсальный, но не могу разобраться почему появляется прокрутка горизонтальная и как от нее избавиться
-    position: relative;
-    display: inline-block;
-    margin-right: 79px;
-    padding-right: 15px;
-    background-color: #ffffff;
-
-    &::after {
-      content: ""; //разкоментить
-      position: absolute;
-      top: 16px;
-      width: 100vw;
-      height: 2px;
-      background: @color-brand;
-      z-index: -1;
-    }
-
-    @media (min-width: @tablet-width) {
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        height: 2px;
-        width: 100vw;
-        background-color: @color-brand;
-        margin-top: 4px;
-      }
-
-      &::before {
-        right: calc(100% + 40px);
-      }
-
-      &::after {
-        left: calc(100% + 24px);
-      }
-    }
-
-    @media (min-width: @tablet-width) {
-      &::before,
-      &::after {
-        margin-top: 3px;
-      }
-    }
-  }
-}
-
-.form-selection__group:nth-of-type(2) {
-  margin-bottom: 18px;
-
-  & .form-selection__legend {
-    margin-bottom: 37px;
-
-    //такой вариант зеленой линии подходит только если фон однородный. и он все равно не работает на таблет и десктоп нужен рефактор и добавлять обертку
     position: relative;
     width: calc(100% + 40px);
     margin-left: -20px;
@@ -86,7 +32,9 @@
       position: absolute;
       top: 50%;
       height: 2px;
-      width: 100%;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
       background-color: @color-brand;
       z-index: -1;
     }
@@ -96,7 +44,27 @@
     display: inline-block;
     background-color: #ffffff;
     padding: 0 22px 0 20px;
+    max-width: 89%;
   }
+}
+
+.form-selection__group:nth-of-type(1) {
+  margin-bottom: 25px;
+
+  & .form-selection__legend {
+    &::before {
+      top: 32%;
+    }
+  }
+
+  & .form-selection__text {
+    padding: 0 18px 0 20px;
+    width: 220px;
+  }
+}
+
+.form-selection__group:nth-of-type(2) {
+  margin-bottom: 18px;
 }
 
 .form-selection__group:nth-of-type(3) {
@@ -104,26 +72,6 @@
 
   & .form-selection__legend {
     margin-bottom: 32px;
-
-    //такой вариант подходит только если фон однородный и он все равно не работает на таблет и десктоп нужен рефактор и добавлять обертку
-    position: relative;
-    width: 100%;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      height: 2px;
-      width: calc(100% + 20px);
-      background-color: @color-brand;
-      z-index: -1;
-    }
-  }
-
-  .form-selection__text {
-    background-color: #ffffff;
-    padding: 0 22px 0 40px;
-    margin-left: -40px;
   }
 }
 
@@ -247,6 +195,10 @@
 
   .form-selection__group:nth-of-type(1) {
     margin-bottom: 66px;
+
+    & .form-selection__text {
+      width: auto;
+    }
   }
 
   .form-selection__group:nth-of-type(2) {
@@ -262,6 +214,22 @@
 
     & .form-selection__legend {
       margin-bottom: 62px;
+    }
+  }
+
+  .form-selection__group:nth-of-type(1),
+  .form-selection__group:nth-of-type(2),
+  .form-selection__group:nth-of-type(3) {
+    & .form-selection__legend {
+      margin-left: -40px;
+
+      &::before {
+        top: 60%;
+      }
+    }
+
+    & .form-selection__text {
+      padding: 0 40px;
     }
   }
 
