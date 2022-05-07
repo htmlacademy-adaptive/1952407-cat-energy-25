@@ -9,9 +9,17 @@
   flex-direction: column;
   min-width: 320px;
 
+  @media (min-width: @tablet-width) {
+    &--catalog .page__main-header {
+      margin-top: 32px;
+      margin-bottom: 63px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     &--catalog .page__main-header {
-      margin-bottom: 82px;
+      margin-top: 0;
+      margin-bottom: 74px;
     }
   }
 
@@ -23,7 +31,7 @@
 
   @media (min-width: @desktop-width) {
     &--form .page__main-header {
-      margin-bottom: 75px;
+      margin-bottom: 73px;
     }
   }
 }
