@@ -2040,6 +2040,11 @@ img {
   background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/extra-bonus-background-cat-mobile.jpg") center / cover no-repeat;
   min-height: 289px;
 }
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .extra-bonus {
+    background: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/extra-bonus-background-cat-mobile@2x.jpg") center / cover no-repeat;
+  }
+}
 .extra-bonus__wrapper {
   font-family: "Arial", sans-serif;
   font-size: 16px;
