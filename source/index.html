@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
@@ -12,7 +16,11 @@
       <div class="main-header__container">
         <div class="main-header__wrapper">
           <a class="main-header__logo-link-img" href="#">
-            <img src="img/logo-img-mobile.svg" width="33" height="37" alt="Логотип cat energy.">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-img-mobile.svg" width="33" height="37" alt="Логотип cat energy.">
+            </picture>
           </a>
           <a class="main-header__logo-link-text" href="#">
             <img src="img/logo-text-mobile.svg" width="101" height="18" alt="Cat energy.">
@@ -46,7 +54,11 @@
           <h2 class="intro__title">Функциональное питание для котов</h2>
           <p class="intro__description">Занялся собой? Займись котом!</p>
           <div class="intro__picture-wrapper">
-            <img class="intro__image" src="img/intro-food-mobile.png" width="280" height="270" alt="Cat Energy pro с курицой">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="img/intro-food-desktop.png 1x, img/intro-food-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/intro-food-tablet.png 1x, img/intro-food-tablet@2x.png 2x">
+              <img class="intro__image" src="img/intro-food-mobile.png" srcset="img/intro-food-mobile@2x.png 2x" width="280" height="270" alt="Cat Energy pro с курицой">
+            </picture>
           </div>
           <a class="intro__link button-link button-link--small" href="form.html">Подобрать программу</a>
         </div>
@@ -109,18 +121,27 @@
           <div class="example__wrapper-slider slider">
             <div class="slider__wrapper-images">
               <div class="slider__item slider__item--before">
-                <img class="slider__image" src="img/before-mobile.png" width="280" height="232" alt="Пример как выглядит кот до диеты.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/before-desktop.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet.png 1x, img/before-tablet@2x.png 2x">
+                  <!-- для мобильной версии при переключении слайдера повесить класс slider__image--hidden и убрать его у фото after -->
+                  <img class="slider__image" src="img/before-mobile.png" srcset="img/before-mobile@2x.png 2x" width="280" height="232" alt="Пример как выглядит кот до диеты.">
+                </picture>
               </div>
               <div class="slider__item slider__item--after">
-                <img class="slider__image slider__image--hidden" src="img/after-mobile.png" width="243" height="232" alt="Пример как выглядит кот после диеты.">
+                <picture>
+                  <source media="(min-width: 1300px)" srcset="img/after-desktop.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="slider__image slider__image--after slider__image--hidden" src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" width="243" height="232" alt="Пример как выглядит кот после диеты.">
+                </picture>
               </div>
             </div>
             <!-- ползунок -->
             <div class="slider__range">
               <button class="slider__range-button slider__range-button--before" type="button">Было</button>
               <div class="slider__range-scale">
-                <!-- для мобильной версии при переключении слайдера повесить класс slider__range-toogle--after на кнопку ниже -->
-                <button class="slider__range-toogle" type="button"></button>
+                  <!-- для мобильной версии при переключении слайдера повесить класс slider__range-toogle--after на кнопку ниже -->
+                  <button class="slider__range-toogle " type="button"></button>
               </div>
               <button class="slider__range-button slider__range-button--after" type="button">Стало</button>
             </div>

@@ -36,6 +36,11 @@
     color: @color-main-text;
     font-size: 60px;
     text-align: left;
+    margin: 0 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }
 
@@ -47,11 +52,15 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    margin-top: 41px;
+    margin-left: 89px;
+    margin-right: 89px;
+    margin-top: 42px;
     margin-bottom: 48px;
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
+    margin-top: 40px;
     margin-bottom: 52px;
   }
 }
@@ -61,15 +70,15 @@
     order: 4;
     align-self: flex-end;
     position: relative;
-    @intro-shift: -25px; //поменять когда будет тег picture
+    @intro-shift: -83px;
     top: @intro-shift;
     margin-bottom: @intro-shift;
   }
 
   @media (min-width: @desktop-width) {
-    @intro-shift: -200px; //поменять когда будет тег picture
+    @intro-shift: -368px;
     top: @intro-shift;
-    margin-bottom: -4px;
+    margin-bottom: -232px;
   }
 }
 
@@ -80,13 +89,22 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+    width: 709px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 552px;
   }
 }
 
 .intro__link {
   @media (min-width: @tablet-width) {
-    margin: 0;
+    margin: 0 90px;
     order: 3;
     z-index: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
   }
 }

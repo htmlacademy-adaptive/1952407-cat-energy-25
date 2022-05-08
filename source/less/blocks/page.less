@@ -9,9 +9,17 @@
   flex-direction: column;
   min-width: 320px;
 
+  @media (min-width: @tablet-width) {
+    &--catalog .page__main-header {
+      margin-top: 32px;
+      margin-bottom: 63px;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     &--catalog .page__main-header {
-      margin-bottom: 82px;
+      margin-top: 0;
+      margin-bottom: 74px;
     }
   }
 
@@ -23,7 +31,7 @@
 
   @media (min-width: @desktop-width) {
     &--form .page__main-header {
-      margin-bottom: 80px;
+      margin-bottom: 73px;
     }
   }
 }
@@ -32,13 +40,13 @@
   @media (min-width: @tablet-width) {
     width: @tablet-ident;
     margin: 0 auto;
-    margin-top: 32px;
-    margin-bottom: 65px;
+    margin-top: 30px;
+    margin-bottom: 64px;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
     margin: 0;
-    margin-bottom: 116px;
+    margin-bottom: 111px;
   }
 }
