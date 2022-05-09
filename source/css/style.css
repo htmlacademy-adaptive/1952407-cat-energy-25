@@ -2318,10 +2318,34 @@ img {
   margin-right: 13px;
   flex-shrink: 0;
 }
+.form-selection__input::-webkit-input-placeholder {
+  color: #444444;
+}
+.form-selection__input::-moz-placeholder {
+  color: #444444;
+}
+.form-selection__input::-webkit-outer-spin-button,
+.form-selection__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
 .form-selection__input {
   width: 100%;
   padding: 13px 15px;
   border: 1px solid #e7e7e7;
+  -webkit-appearance: none;
+          appearance: none;
+}
+.form-selection__input:hover {
+  border-color: #cdcdcd;
+}
+.form-selection__input:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: -1px;
+}
+.form-selection__input:focus-visible:invalid {
+  outline: 2px solid #ff8282;
+  outline-offset: -1px;
 }
 .form-selection__input-text,
 .form-selection__input,
@@ -2332,12 +2356,29 @@ img {
   text-transform: uppercase;
   color: #444444;
 }
+.form-selection__habits::-webkit-input-placeholder {
+  color: #444444;
+}
+.form-selection__habits::-moz-placeholder {
+  color: #444444;
+}
 .form-selection__habits {
   color: #000000;
   width: 100%;
   min-height: 150px;
   padding: 9px 10px 13px 15px;
   border: 1px solid #e7e7e7;
+}
+.form-selection__habits:hover {
+  border-color: #cdcdcd;
+}
+.form-selection__habits:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: -1px;
+}
+.form-selection__habits:focus-visible:invalid {
+  outline: 2px solid #ff8282;
+  outline-offset: -1px;
 }
 .form-selection__submit {
   text-align: center;
@@ -2567,10 +2608,39 @@ img {
   text-transform: uppercase;
   color: #444444;
 }
+.contacts-data__input::-webkit-input-placeholder {
+  color: #444444;
+}
+.contacts-data__input::-moz-placeholder {
+  color: #444444;
+}
 .contacts-data__input {
   width: 100%;
   padding: 13px 15px;
   border: 1px solid #e7e7e7;
+}
+.contacts-data__input:hover {
+  border-color: #cdcdcd;
+}
+.contacts-data__input:focus-visible + .contacts-data__input-icon--mail {
+  stroke: #68B738;
+}
+.contacts-data__input:focus-visible + .contacts-data__input-icon--phone {
+  fill: #68B738;
+}
+.contacts-data__input:focus-visible {
+  outline: 2px solid #000000;
+  outline-offset: -1px;
+}
+.contacts-data__input:focus-visible:invalid {
+  outline: 2px solid #ff8282;
+  outline-offset: -1px;
+}
+.contacts-data__input:focus-visible:invalid + .contacts-data__input-icon--mail {
+  stroke: #ff8282;
+}
+.contacts-data__input:focus-visible:invalid + .contacts-data__input-icon--phone {
+  fill: #ff8282;
 }
 .contacts-data__text {
   flex-shrink: 0;
@@ -2581,6 +2651,13 @@ img {
   top: 50%;
   transform: translateY(-50%);
   right: 14px;
+}
+.contacts-data__input-icon--mail {
+  fill: #ffffff;
+  stroke: #000000;
+}
+.contacts-data__input-icon--phone {
+  fill: #000000;
 }
 @media (min-width: 768px) {
   .contacts-data__text,
