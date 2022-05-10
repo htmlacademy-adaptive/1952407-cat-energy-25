@@ -2,6 +2,11 @@
   background: linear-gradient(fade(@color-brand, 85%), fade(@color-brand, 85%)),
     url("../img/extra-bonus-background-cat-mobile.jpg") center/cover no-repeat;
   min-height: 289px;
+
+  @media (min-resolution: 2dppx) {
+    background: linear-gradient(fade(@color-brand, 85%), fade(@color-brand, 85%)),
+      url("../img/extra-bonus-background-cat-mobile@2x.jpg") center/cover no-repeat;
+  }
 }
 
 .extra-bonus__wrapper {
