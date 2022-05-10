@@ -988,7 +988,7 @@ img {
 }
 @media (min-width: 1300px) {
   .main-page__program {
-    margin-bottom: 71px;
+    margin-bottom: 69px;
   }
 }
 @media (min-width: 768px) {
@@ -998,7 +998,7 @@ img {
 }
 @media (min-width: 1300px) {
   .main-page__program-benefits {
-    margin-bottom: 165px;
+    margin-bottom: 28px;
   }
 }
 .main-page__title {
@@ -1094,7 +1094,7 @@ img {
   font-weight: 400;
   font-size: 36px;
   line-height: 1.11;
-  padding: 25px 20px 0 20px;
+  padding-top: 25px;
   margin: 0;
   margin-bottom: 40px;
 }
@@ -1134,8 +1134,7 @@ img {
     font-size: 60px;
     line-height: 1;
     margin-bottom: 63px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 0;
     padding-top: 43px;
   }
   .example__description {
@@ -1148,23 +1147,22 @@ img {
 @media (min-width: 1300px) {
   .example {
     border: none;
-    background-color: #F2F2F2;
-    padding-bottom: 64px;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff 136px, #f2f2f2 136px, #f2f2f2);
+    padding-bottom: 25px;
   }
   .example__title {
     width: 1220px;
     margin: 0 auto;
     padding: 0;
-    position: relative;
-    top: -136px;
-    margin-bottom: -136px;
+    margin-bottom: 146px;
   }
   .example__container {
     width: 1220px;
     margin: 0 auto;
-    margin-top: 146px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 134px;
   }
   .example__wrapper {
     width: 436px;
@@ -1455,11 +1453,13 @@ img {
     margin: 0;
     padding: 0;
     width: 650px;
+    margin-left: 30px;
+    position: relative;
+    top: -43px;
   }
   .slider__wrapper-images {
-    top: -250px;
-    margin-bottom: -250px;
-    left: 30px;
+    top: 0;
+    margin-bottom: 0;
   }
   .slider__image {
     width: 650px;
@@ -1470,10 +1470,6 @@ img {
   .slider__image--after {
     width: 530px;
     height: 512px;
-  }
-  .slider__range {
-    margin-left: auto;
-    margin-right: 12px;
   }
 }
 .main-footer__map img {

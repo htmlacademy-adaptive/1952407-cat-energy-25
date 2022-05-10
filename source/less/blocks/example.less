@@ -6,7 +6,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 1.11;
-  padding: 25px 20px 0 20px;
+  padding-top: 25px;
   margin: 0;
   margin-bottom: 40px;
 }
@@ -55,8 +55,7 @@
     font-size: 60px;
     line-height: 1;
     margin-bottom: 63px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 0;
     padding-top: 43px;
   }
 
@@ -71,26 +70,24 @@
 @media (min-width: @desktop-width) {
   .example {
     border: none;
-    background-color: @color-background;
-    padding-bottom: 64px;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff 136px, #f2f2f2 136px, #f2f2f2);
+    padding-bottom: 25px;
   }
 
   .example__title {
     width: 1220px;
     margin: 0 auto;
     padding: 0;
-    position: relative;
-    @example-shift: -136px;
-    top: @example-shift;
-    margin-bottom: @example-shift;
+    margin-bottom: 146px;
   }
 
   .example__container {
     width: 1220px;
     margin: 0 auto;
-    margin-top: 146px;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 134px;
   }
 
   .example__wrapper {
