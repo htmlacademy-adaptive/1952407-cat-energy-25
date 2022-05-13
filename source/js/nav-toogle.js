@@ -3,6 +3,7 @@ let navToggle = document.querySelector('.navigation-toogle');
 
 navMain.classList.remove('navigation--nojs');
 navToggle.classList.remove('navigation-toogle--closed');
+navToggle.classList.remove('navigation-toogle--no-js');
 navToggle.classList.add('navigation-toogle--opened');
 
 navToggle.addEventListener('click', function () {

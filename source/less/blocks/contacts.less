@@ -98,6 +98,11 @@
   }
 }
 
+.contacts__logo-copyright {
+  flex-shrink: 0;
+  margin-left: 5px;
+}
+
 .contacts__copyright-company-name {
   color: @color-text;
   font-family: @font-secondary;
@@ -123,17 +128,24 @@
   .contacts__social {
     border: none;
     padding: 0;
+    flex-shrink: 0;
   }
 
   .contacts__academy-logo {
     border: none;
     padding: 0;
     margin-top: -2px;
+    max-width: 173px;
   }
 
   .contacts__copyright-company-name {
     line-height: 18.4px;
     margin-right: 24px;
+  }
+
+  .contacts__logo-copyright {
+    align-self: start;
+    margin-left: 0;
   }
 }
 

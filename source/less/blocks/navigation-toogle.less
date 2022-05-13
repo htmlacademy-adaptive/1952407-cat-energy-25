@@ -5,6 +5,7 @@
   background-color: #ffffff;
   height: 28px;
   margin-top: -2px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -66,5 +67,16 @@
     top: 0;
     left: 0;
     transform: rotate(-45deg);
+  }
+}
+
+.navigation-toogle--no-js {
+  cursor: default;
+}
+
+.navigation-toogle--no-js .navigation-toogle__wrapper {
+  &::before,
+  &::after {
+    background-color: #ffffff;
   }
 }
