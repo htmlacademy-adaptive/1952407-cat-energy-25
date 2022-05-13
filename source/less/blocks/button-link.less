@@ -38,9 +38,22 @@
     width: auto;
     padding: 17px 28px;
   }
+
+  @media (min-width: @desktop-width) {
+    max-width: 50%;
+  }
 }
 
 .button-link--more {
   background-color: @color-background;
   color: @color-text;
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+
+  &:active {
+    background-color: #ebebeb;
+    color: fade(#000000, 30%);
+  }
 }

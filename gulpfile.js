@@ -136,7 +136,7 @@ const watcher = () => {
   gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
-// Build prodaction
+// Build production
 
 export const build = gulp.series(
   clean,
@@ -166,6 +166,15 @@ export default gulp.series(
     sprite,
     createWebp
   ),
+  gulp.series(
+    server,
+    watcher
+  )
+);
+
+// start live server
+
+export const live = gulp.series(
   gulp.series(
     server,
     watcher
