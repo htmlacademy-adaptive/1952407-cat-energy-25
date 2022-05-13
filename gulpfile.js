@@ -48,7 +48,7 @@ const scripts = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicons/*.{png,svg}'])
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'))
 }
@@ -62,7 +62,7 @@ const copyImages = () => {
 // WebP
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicons/*.{png,svg}'])
     .pipe(squoosh({
     webp: {}
   }))
