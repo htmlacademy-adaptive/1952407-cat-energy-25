@@ -4,23 +4,22 @@
   padding-left: 45px;
 
   &:hover {
-    & .radio-control__control-mark {
+    .radio-control__control-mark {
       border-color: #bababa;
     }
   }
 
   &:active {
-    & .radio-control__control-mark {
+    .radio-control__control-mark {
       border-color: fade(#bababa, 30%);
     }
 
-    & .radio-control__control-label {
+    .radio-control__control-label {
       color: fade(#222222, 30%);
     }
 
-    & .radio-control__control-input[type="radio"]:checked + .radio-control__control-mark::after {
+    .radio-control__control-input[type="radio"]:checked + .radio-control__control-mark::after {
       background-color: fade(#68b738, 30%);
-      //вложеность меньше сделать не представляется возможным. если только делать opacity 0.3 на класс radio-control:active, но такой способ хуже чем этот
     }
   }
 
@@ -60,6 +59,22 @@
   @media (min-width: @tablet-width) {
     width: 18px;
     height: 18px;
+  }
+}
+
+.radio-control__control-input[type="radio"]:disabled {
+  + .radio-control__control-mark {
+    border-color: fade(#bababa, 30%);
+    cursor: no-drop;
+
+    &::after {
+      background-color: fade(#68b738, 30%);
+    }
+  }
+
+  ~ .radio-control__control-label {
+    color: fade(#222222, 30%);
+    cursor: no-drop;
   }
 }
 
