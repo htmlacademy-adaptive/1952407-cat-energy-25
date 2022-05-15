@@ -32,6 +32,19 @@
   border: 1px solid #e7e7e7;
   height: 46px;
 
+  &:not(:placeholder-shown):invalid {
+    outline: 2px solid #ff8282;
+    outline-offset: -1px;
+
+    + .contacts-data__input-icon--mail {
+      stroke: #ff8282;
+    }
+
+    + .contacts-data__input-icon--phone {
+      fill: #ff8282;
+    }
+  }
+
   &:hover {
     border-color: #cdcdcd;
   }
@@ -47,19 +60,6 @@
   &:focus-visible {
     outline: 2px solid #000000;
     outline-offset: -1px;
-  }
-
-  &:focus-visible:invalid {
-    outline: 2px solid #ff8282;
-    outline-offset: -1px;
-
-    & + .contacts-data__input-icon--mail {
-      stroke: #ff8282;
-    }
-
-    & + .contacts-data__input-icon--phone {
-      fill: #ff8282;
-    }
   }
 }
 
@@ -107,13 +107,21 @@
   }
 
   .contacts-data__input {
-    padding: 10px 20px;
+    padding: 10px 40px 10px 20px;
     height: 52px;
+  }
+
+  .contacts-data__input-icon {
+    right: 16px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .contacts-data:not(:last-child) {
     margin-bottom: 0;
+  }
+
+  .contacts-data__input-icon {
+    right: 18px;
   }
 }
